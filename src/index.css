@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #282d35;
+  padding-top: 20px;
+}
+
+.main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+
+
+.card {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  display: flex;
+  background-color: white;
+  filter: brightness(40%);
+  transition-duration: 0.5s;
+  overflow: hidden;
+}
+
+.card:hover {
+  filter: brightness(85%);
+  width: 800px;
+  height: 300px;
+}
+
+.slide-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid #282d35;
+  background-color: #282d35;
+  border-radius: 0.5rem;
+  top: 50%;
+  height: fit-content;
+  transform: translateY(-50%);
+  left: -20%;
+  position: absolute;
+  transition-duration: 1.5s ;
+  opacity: 0;
+}
+
+.card:hover .slide-up{
+  margin-left: 2%;
+  transition: all;
+  transition-duration: 1s ;
+  left: 0;
+  opacity: 1;
+}
+
+.fa-github, .fa-arrow-right{
+  color: white;
+  font-size: 3rem; 
+}
+
+.fa-globe{
+  color: white;
+  font-size: 2rem; 
+}
+
+.img-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.card-text {
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translate(-50%);
+  margin: auto;
+  z-index: auto;
+  color: white;
+  background-color:#282d35;
+  padding: 2%;
+  opacity: -1;
+  transition: all;
+  transition-duration: 1.5s ;
+  border-radius: 1rem;
+  transform: translateY(-50%);
+  
+}
+
+.card:hover .card-text{
+  margin-right: 2%;
+  opacity: 1;
+  right: 0;
+  transition-duration: 1s ;
+}
+
+.card-text a{
+  text-decoration: none;
 }
