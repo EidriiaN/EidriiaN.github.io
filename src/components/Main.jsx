@@ -8,12 +8,12 @@ export default function Main() {
         <div className="main">
 
             <div className="card">
-                <a href="Travel_site\public\index.html" target="_blank" rel="noopener noreferrer">
+                <a href="https://eidriian.github.io/travel-website/" target="_blank" rel="noopener noreferrer">
                 <h2 className="card-text"><i class="fa-solid fa-globe"></i></h2>
                 </a>
                 <img className="img-card" src={require("../images/Screenshot_1.png")} alt="img1" />
                 
-                <a href="https://github.com/EidriiaN/EidriiaN-travel" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/EidriiaN/travel-website" target="_blank" rel="noopener noreferrer">
                     <div className="slide-up">
                         <i className="fa-brands fa-github"></i>
                     </div>
